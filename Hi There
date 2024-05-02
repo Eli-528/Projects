@@ -50,7 +50,9 @@ namespace Program
                 Console.WriteLine("To summarize things so far, you're name is " + name + ". and you are " + age + ". And you're a " + gender + ". Is that correct?");
                 Console.Write(Response: );
 
-                string response = Console.ReadLine(
+                string response = Console.ReadLine()
+
+                if(response = 'Y' or "Yes")
                     
                 )
             }
