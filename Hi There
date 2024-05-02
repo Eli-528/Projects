@@ -1,0 +1,38 @@
+using System;
+namespace Program 
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Console.WriteLine("Hello there! What's your name?");
+      Console.Write("Name: ");
+      
+      string name = Console.ReadLine();
+      
+      Console.WriteLine("   ");
+      
+      Console.WriteLine(name + ", huh? That's a nice");
+      Console.WriteLine("Very well. How old are you?");
+      Console.Write("Age: ");
+      
+      string UserInput = Console.ReadLine();
+      
+      try
+      {
+        int number =
+          Convert.ToInt32(UserInput);
+      }
+      catch(FormatException)
+      {
+        Console.WriteLine("I see. Welcome.");ll
+      }
+      catch(OverflowException)
+      {
+        Console.WriteLine("Error detected during process. . .");
+      }
+      
+     
+    }
+  }
+}
