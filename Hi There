@@ -1,38 +1,63 @@
-using System;
-namespace Program 
+using System
+
+namespace Program
 {
-  class Program
-  {
-    static void Main(string[] args)
+    class Program
     {
-      Console.WriteLine("Hello there! What's your name?");
-      Console.Write("Name: ");
-      
-      string name = Console.ReadLine();
-      
-      Console.WriteLine("   ");
-      
-      Console.WriteLine(name + ", huh? That's a nice");
-      Console.WriteLine("Very well. How old are you?");
-      Console.Write("Age: ");
-      
-      string UserInput = Console.ReadLine();
-      
-      try
-      {
-        int number =
-          Convert.ToInt32(UserInput);
-      }
-      catch(FormatException)
-      {
-        Console.WriteLine("I see. Welcome.");ll
-      }
-      catch(OverflowException)
-      {
-        Console.WriteLine("Error detected during process. . .");
-      }
-      
-     
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hi there!!");
+            Console.WriteLine("What's your name?");
+            Console.Write("Name: ");
+
+            string name = Console.ReadLine();
+        
+            Console.WriteLine(name + ", huh? that's a nice name.");
+            Console.WriteLine("Next question. How old are you?");
+            Console.Write("Age: ");
+
+            string UserInput = Console.ReadLine
+
+            try 
+            {
+                int number = 
+                Convert.ToInt32(UserInput);
+            }
+            catch(FormatException)
+            {
+                Console.WriteLine()
+            }
+            catch(OverflowException)
+            {
+                Console.WriteLine()
+            }
+
+            if(number = 18)
+            {
+                Console.WriteLine("I see. Welcome!");
+                Console.WriteLine("Are you a boy or a girl?");
+                Console.Write(Gender: );
+
+                string gender = Console.ReadLine();
+
+                if(gender = 'M' or "Male")
+                {
+                    Console.WriteLine("Undertood. I'll keep that in mind.");
+                }
+
+                Console.WriteLine(".....");
+
+                Console.WriteLine("To summarize things so far, you're name is " + name + ". and you are " + age + ". And you're a " + gender + ". Is that correct?");
+                Console.Write(Response: );
+
+                string response = Console.ReadLine(
+                    
+                )
+            }
+            else
+            {
+                Console.WriteLine("Im sorry but, you're too old for this shenanigans. GET OUT!!");
+            }
+        }
     }
-  }
 }
