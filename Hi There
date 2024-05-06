@@ -1,9 +1,19 @@
-using System
+using System;
 
 namespace Program
 {
     class Program
     {
+        static bool IsAllowed(int age)
+        {
+            return age >= 18; // Assuming the minimum age for access is 18
+        }
+        
+        static bool IsMale(string gender)
+        {
+            return gender == "Male";
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hi there!!");
@@ -11,54 +21,52 @@ namespace Program
             Console.Write("Name: ");
 
             string name = Console.ReadLine();
-        
+            
+            Console.WriteLine();
+
             Console.WriteLine(name + ", huh? that's a nice name.");
             Console.WriteLine("Next question. How old are you?");
             Console.Write("Age: ");
 
-            string UserInput = Console.ReadLine
+            string userInput = Console.ReadLine();
+            int age = 0;
 
-            try 
+            try
             {
-                int number = 
-                Convert.ToInt32(UserInput);
+                age = Convert.ToInt32(userInput);
             }
-            catch(FormatException)
+            catch (FormatException)
             {
-                Console.WriteLine()
+                Console.WriteLine("Invalid input. Please enter a valid integer age.");
+                return;
             }
-            catch(OverflowException)
+            catch (OverflowException)
             {
-                Console.WriteLine()
+                Console.WriteLine("Invalid input. Please enter a valid integer age within the valid range.");
+                return;
             }
 
-            if(number = 18)
+            if (IsAllowed(age))
             {
-                Console.WriteLine("I see. Welcome!");
+                Console.WriteLine("I see. Welcome.");
                 Console.WriteLine("Are you a boy or a girl?");
-                Console.Write(Gender: );
-
+                
                 string gender = Console.ReadLine();
-
-                if(gender = 'M' or "Male")
+                
+                bool isMale = IsMale(gender);
+            
+                if(isMale)
                 {
-                    Console.WriteLine("Undertood. I'll keep that in mind.");
+                    Console.WriteLine("Got it. You're a boy. I'll keep that in mind.");
                 }
-
-                Console.WriteLine(".....");
-
-                Console.WriteLine("To summarize things so far, you're name is " + name + ". and you are " + age + ". And you're a " + gender + ". Is that correct?");
-                Console.Write(Response: );
-
-                string response = Console.ReadLine()
-
-                if(response = 'Y' or "Yes")
-                    
-                )
+                else
+                {
+                    Console.WriteLine("Got it. You're a girl. I'll keep that in mind.");
+                }
             }
             else
             {
-                Console.WriteLine("Im sorry but, you're too old for this shenanigans. GET OUT!!");
+                Console.WriteLine("Sorry, you are not allowed access.");
             }
         }
     }
