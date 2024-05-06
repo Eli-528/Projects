@@ -13,6 +13,11 @@ namespace Program
         {
             return gender == "Male";
         }
+        
+        static bool IsYes(string response)
+        {
+            return response == "Yes";
+        }
 
         static void Main(string[] args)
         {
@@ -63,6 +68,25 @@ namespace Program
                 {
                     Console.WriteLine("Got it. You're a girl. I'll keep that in mind.");
                 }
+                
+                Console.WriteLine("So, to summarize things...");
+                Console.WriteLine($"Your name is {name}, your age is {age}, and you are a {(isMale ? "boy" : "girl")}.");
+                Console.WriteLine("Did I get it all correctly?");
+                Console.Write("Response: ");
+                
+                string response = Console.ReadLine();
+                
+                bool isResponseYes = IsYes(response);
+                
+                if(isResponseYes)
+                {
+                    Console.WriteLine("All right! That's all for the introductions. Once again, welcome. We'll see each other again. Until then, have fun.");
+                }
+                else
+                {
+                    Console.WriteLine("I see. What part did I get wrong?");
+                }
+                
             }
             else
             {
